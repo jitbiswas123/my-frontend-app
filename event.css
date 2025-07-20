@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.event-header{
+    margin-top: 15vh;
+    margin-left: 2vh;
+    text-align: center;
+}
+.event-header .title span{
+    font-size: 6vh;
+    font-weight: 600;
+    color: #7A687F;
+}
+.event-date{
+    margin-top: 5vh !important;
+    margin: auto;
+    width: 40%;
+    /* background-color: aqua; */
+}
+.btn-group input[type="radio"]#btnradio1:checked+label{
+    border: 2px solid #6A0DAD;
+    background-color: #6A0DAD;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.btn-group input[type="radio"]#btnradio2:checked+label{
+    border: 1px solid #6A0DAD;
+    background-color: #6A0DAD;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.btn-group .btn:hover{
+    background-color: #6a0dad3d;
+}
+
+
+
+/*---------------------event data-------------------------*/
+
+.event-data{
+    width: 90%;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    border: 2px double #333;
+    padding-right: 10px;
+    margin-top: 10vh !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form{
+    display: none;
+}
+
+.event-data .table tr th{
+    font-size: 2.8vh;
+}
+
+.event-data .table tr td .e-btn{
+    padding: 10px;
+    margin-top: 6vh;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #7A687F;
+    background: linear-gradient( #fff,#9b2cb1);
+    border: none;
+    transition: 0.6s;
+}
+
+.event-data .table tr td .e-btn:hover{
+    color: #6A0DAD;
+    background: linear-gradient(#9b2cb1,white);
+
+}
+
+.event-data .table tr td .e-submit{
+    background-color: #6A0DAD;
+    border: #6A0DAD;
+}
+
+.event-data .table tr td .e-submit:hover{
+    background-color: #ad66df;
+}
+
+
+/*---------------thanks---------------------*/
+
+.thanks h3{
+    font-size: 6vh;
+    font-weight: 600;
+    color: #7A687F;
+    text-align: center;
+    margin-top: 10vh;
+    transition: 0.6s;
+    
+}
+
+.thanks h3:hover{
+    color: #9b2cb1;
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniEvent</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="front.css">
+  <link rel="stylesheet" href="event.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <nav class="navbar navbar-dark fixed-top" style="background-color: #FFFFFF;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <div class="nav-logo"><span id="uni">Uni</span><span id="event">Event</span></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation" style="background-color: #6A0DAD;">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header" style="background-color: #6A0DAD;">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">UniEvent</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" style="background-color: #F1F2F4;">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html" style="color: #7A687F;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" style="color: #7A687F;">
+                  Login
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light">
+                  <li><a class="dropdown-item" href="#" style="color: #7A687F;">Sign in</a></li>
+                  <li><a class="dropdown-item" href="#" style="color: #7A687F;">Register</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search for Events" aria-label="Search">
+              <button class="btn" type="submit" style="background-color: #8d44c1; color: #F1F2F4;">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="event-header">
+    <h2 class="title"><span>Dive into Events</span></h2>
+  </div>
+
+  <div class="event-date">
+    <div class="btn-group d-flex justify-content-center" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <label class="btn btn-outline-dark" for="btnradio1">Upcoming Events</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-dark reg-events" for="btnradio2">Registered Events</label>
+    </div>
+  </div>
+
+  <div class="event-data" style="width: 80%; margin: auto;">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Descripton</th>
+          <th scope="col">Objective</th>
+          <th scope="col">Dates</th>
+          <th scope="col">Venue</th>
+          <th scope="col">Organised By</th>
+          <th scope="col">Register</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">1</td>
+          <td>5th International Conference on <br>“Recent Advances in Fundamental and Applied Sciences” (RAFAS-2024)
+          </td>
+          <td></td>
+          <td>Local Community Development</td>
+          <td>19 Apr 2024 10:00 AM - 20 Apr 2024 4:00 PM</td>
+          <td>Shanti Devi Mittal Auditorium</td>
+          <td>School of Chemical Engineering and Physical Sciences</td>
+          <td><button class="reg1 e-btn">Register</button></td>
+        </tr>
+        <tr class="event-form1 form">
+          <td colspan="8">
+            <form class="row g-3 needs-validation" novalidate id="form-r1">
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Registration Number</label>
+                <div class="input-group has-validation">
+                  <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                  <input type="text" class="form-control regd" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter valid registration number.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary e-submit" type="submit">Submit</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">2</td>
+          <td>2nd International Conference on Networks, Intelligence and Computing (ICONIC-2024)</td>
+          <td></td>
+          <td>National/Social/Communal/Harmony</td>
+          <td>26 Apr 2024 9:30 AM - 26 Apr 2024 4:00 PM</td>
+          <td>Shanti Devi Mittal Auditorium</td>
+          <td>School of Computer Application</td>
+          <td><button class="reg2 e-btn">Register</button></td>
+        </tr>
+        <tr class="event-form2 form">
+          <td colspan="8">
+            <form class="row g-3 needs-validation" novalidate id="form-r2">
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Registration Number</label>
+                <div class="input-group has-validation">
+                  <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                  <input type="text" class="form-control regd" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter valid registration number.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary e-submit" type="submit">Submit</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">3</td>
+          <td>International Conference on Advancements in Aerospace Engineering 2024 (ICAAE - 2024)</td>
+          <td></td>
+          <td>National/Social/Communal/Harmony</td>
+          <td>30 Apr 2024 9 AM - 01 May 2024 5 PM</td>
+          <td>Shanti Devi Mittal Auditorium</td>
+          <td>School of Mechanical Engineering</td>
+          <td><button class="reg3 e-btn">Register</button></td>
+        </tr>
+        <tr class="event-form3 form">
+          <td colspan="8">
+            <form class="row g-3 needs-validation" novalidate id="form-r3">
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Registration Number</label>
+                <div class="input-group has-validation">
+                  <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                  <input type="text" class="form-control regd" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter valid registration number.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary e-submit" type="submit">Submit</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">4</td>
+          <td>BACKCUS-100 9th International Conference on Computing Sciences (ICCS-2024)</td>
+          <td>Provide a platform to explore emerging trends, foster collaboration, and inspire innovation and creativity
+            in engineering education, research, and industry applications.</td>
+          <td>National/Social/Communal/Harmony</td>
+          <td>03 May 2024 09:00 AM - 03 May 2024 4:00 PM</td>
+          <td>Shanti Devi Mittal Auditorium</td>
+          <td>School of Computer Science and Engineering</td>
+          <td><button class="reg4 e-btn">Register</button></td>
+        </tr>
+        <tr class="event-form4 form">
+          <td colspan="8">
+            <form class="row g-3 needs-validation" novalidate id="form-r4">
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Registration Number</label>
+                <div class="input-group has-validation">
+                  <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                  <input type="text" class="form-control regd" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter valid registration number.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary e-submit" type="submit">Submit</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+
+        <tr>
+          <td scope="row">5</td>
+          <td>Alumni Homecoming 2024</td>
+          <td>It is a chance for Alumni to revisit their alma mater and reconnect with old friends, teachers and current
+            students.</td>
+          <td>National/Social/Communal/Harmony</td>
+          <td>04 May 2024 9 AM - 04 May 2024 4 PM</td>
+          <td>Shanti Devi Mittal Auditorium</td>
+          <td>Division of Alumni Relations</td>
+          <td><button class="reg5 e-btn">Register</button></td>
+        </tr>
+
+        <tr class="event-form5 form">
+          <td colspan="8">
+            <form class="row g-3 needs-validation" novalidate id="form-r5">
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Registration Number</label>
+                <div class="input-group has-validation">
+                  <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                  <input type="text" class="form-control regd" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter valid registration number.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary e-submit" type="submit">Submit</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <div class="registered-events">
+    <h2>Registered Events</h2>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Descripton</th>
+            <th scope="col">Objective</th>
+            <th scope="col">Dates</th>
+            <th scope="col">Venue</th>
+            <th scope="col">Organised By</th>
+            <th scope="col">Register</th>
+          </tr>
+        </thead>
+        <tbody id="event-data">
+            
+        </tbody>
+      </table>
+</div> -->
+
+  <div class="thanks">
+    <h3>Thanks for taking a part in an event</h3>
+  </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="event.js"></script>
+
+
+<script src="jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.reg1').click(function () {
+      $('.event-form1').slideToggle();
+    })
+    $('.reg2').click(function () {
+      $('.event-form2').slideToggle();
+    })
+    $('.reg3').click(function () {
+      $('.event-form3').slideToggle();
+    })
+    $('.reg4').click(function () {
+      $('.event-form4').slideToggle();
+    })
+    $('.reg5').click(function () {
+      $('.event-form5').slideToggle();
+    })
+  })
+</script>
+
+<!-- <script>
+
+$(document).ready(function(){
+            // Function to handle registration
+            $('.e-submit').click(function(e){
+                e.preventDefault();
+                var row = $(this).closest('tr').clone(); // Clone the entire row
+
+                // Append the cloned row to the registered events list
+                $('#registered-events-list').append(row);
+            });
+        });
+</script> -->
+
+</html>

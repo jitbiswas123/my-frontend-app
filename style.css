@@ -1,0 +1,47 @@
+.navbar-brand{
+  font-size: 5vh;
+  font-weight: 400;
+  /* border: 2px solid black; */
+  
+}
+
+.navbar-brand #uni{
+  font-weight: 800;
+  background-color: black;
+  border:0.5px solid black;
+  color: #fff;
+  padding: 2px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.navbar-brand #event{
+  border: 0.5px solid #fff;
+  background-color: #fff;
+  padding: 2px;
+  font-weight: 800;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.form-control{
+  width: 500px !important;
+  margin-left: 6vw;
+}
+
+.btn-login{
+  position: absolute;
+  right: 200px;
+}
+
+.btn-register{
+  position: absolute;
+  right: 100px;
+}
+
+.container-navitems{
+  font-size: 2.5vh;
+  font-weight: 400;
+  /* margin-left: 2vw; */
+}
+
